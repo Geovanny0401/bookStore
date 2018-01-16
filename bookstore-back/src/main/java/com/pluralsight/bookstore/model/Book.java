@@ -20,7 +20,7 @@ public class Book {
     private String title;
 
     @Column(length = 10000)
-    @Size(min=1, max=1000)
+    @Size(min=1, max=10000)
     private String description;
 
     @Column(name="unit_cost")
@@ -46,6 +46,11 @@ public class Book {
 
     @Enumerated
     private Language language;
+
+    public Book()
+    {
+
+    }
 
     public Book(String title, String description, Float unitCost, String isbn, Date publicationDate, Integer nbOfPages, String imageUrl, Language language) {
         this.title = title;
