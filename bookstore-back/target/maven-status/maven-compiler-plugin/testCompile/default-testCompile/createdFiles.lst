@@ -1,1 +1,3 @@
+com/pluralsight/bookstore/rest/BookEndpointTest.class
 com/pluralsight/bookstore/repository/BookRepositoryTest.class
+com/pluralsight/bookstore/util/TextUtilTest.class
