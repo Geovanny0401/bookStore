@@ -17,9 +17,9 @@ export class BookListComponent implements OnInit {
     },
     {
       id: "2",
-      title: "Angular 5",
-      description: "Angular 5 Front-End",
-      imageURL: "http://ecx.images-amazon.com/images/I/51amFVZbyKL._SL160_.jpg",
+      title: "Beginning Java EE 6",
+      description: "Beginning Java EE platform with GlassFish 3",
+      imageURL: "http://ecx.images-amazon.com/images/I/51baRLwlufL._SL160_.jpg",
     }
   ];
   constructor() { }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'bs-book-detail',
@@ -15,9 +16,13 @@ export class BookDetailComponent implements OnInit {
     nbOfPages: "234",
     languajes: "English"
     };
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
+  delete()
+  {
+    this.router.navigate(['/book-list']);
+  }
 }
