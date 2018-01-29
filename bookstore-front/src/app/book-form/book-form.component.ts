@@ -7,15 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookFormComponent implements OnInit {
 
-    private book = {
-        title: "dummy title",
-        description: "dummy description",
-        unitCost: "123",
-        nbOfPages:"234",
-        imageURL: "http://ecx.images-amazon.com/images/I/51baRLwlufL._SL160_.jpg",
-        language: "0"
-    };
-
+  private book = {
+    title: "Beginning Java EE 7",
+    description: "Beginning Java EE 7",
+    unitCost: "123",
+    nbOfPages: "234",
+    imageURL: "http://ecx.images-amazon.com/images/I/51amFVZbyKL._SL160_.jpg",
+    languajes: "0"
+  };
   constructor() { }
 
   ngOnInit() {
