@@ -11,17 +11,18 @@ export class BookListComponent implements OnInit {
   private books = [
     {
       id: "1",
-      title: "Beginning Java EE 7",
-      description: "Beginning Java EE 7",
+      title: "dummy title 1",
+      description: "dummy description 1",
       imageURL: "http://ecx.images-amazon.com/images/I/51amFVZbyKL._SL160_.jpg",
     },
     {
       id: "2",
-      title: "Beginning Java EE 6",
-      description: "Beginning Java EE platform with GlassFish 3",
+      title: "dummy title 2",
+      description: "dummy description 2",
       imageURL: "http://ecx.images-amazon.com/images/I/51baRLwlufL._SL160_.jpg",
     }
   ];
+
   constructor() { }
 
   ngOnInit() {
