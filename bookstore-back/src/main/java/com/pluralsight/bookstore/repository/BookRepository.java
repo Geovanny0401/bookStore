@@ -27,37 +27,30 @@ public class BookRepository {
     @Inject
     private NumberGenerator generator;
 
-    public Book find(@NotNull Long id)
-    {
-        return em.find(Book.class,id);
-
+    public Book find(@NotNull Long id) {
+        return em.find(Book.class, id);
     }
 
-    @Transactional(REQUIRED)
-    public Book create(@NotNull Book book)
-    {
-        book.setIsbn(generator.generateNumber());
-        book.setTitle(textUtil.sanitize(book.getTitle()));
-        em.persist(book);
-        return book;
-
-    }
-
-    @Transactional(REQUIRED)
-    public void delete(@NotNull Long id)
-    {
-        em.remove(em.getReference(Book.class,id));
-    }
-
-    public List<Book> findAll()
-    {
+    public List<Book> findAll() {
         TypedQuery<Book> query = em.createQuery("SELECT b FROM Book b ORDER BY b.title DESC", Book.class);
         return query.getResultList();
     }
 
-    public  Long countAll()
-    {
-        TypedQuery<Long> query = em.createQuery("SELECT COUNT(b) FROM Book b ", Long.class);
+    public Long countAll() {
+        TypedQuery<Long> query = em.createQuery("SELECT COUNT(b) FROM Book b", Long.class);
         return query.getSingleResult();
+    }
+
+    @Transactional(REQUIRED)
+    public Book create(@NotNull Book book) {
+        book.setIsbn(generator.generateNumber());
+        book.setTitle(textUtil.sanitize(book.getTitle()));
+        em.persist(book);
+        return book;
+    }
+
+    @Transactional(REQUIRED)
+    public void delete(@NotNull Long id) {
+        em.remove(em.getReference(Book.class, id));
     }
 }

@@ -49,12 +49,15 @@ public class Book {
 
 
     @Column(name = "nb_of_pages")
+    @ApiModelProperty("Number of pages")
     private Integer nbOfPages;
 
     @Column(name="image_url")
+    @ApiModelProperty("URL of the image cover")
     private String imageUrl;
 
     @Enumerated
+    @ApiModelProperty( value = "Language in which the book has been written")
     private Language language;
 
     public Book()
@@ -154,8 +157,6 @@ public class Book {
                 ", unitCost=" + unitCost +
                 ", isbn='" + isbn + '\'' +
                 ", publicationDate=" + publicationDate +
-                ", nbOfPages=" + nbOfPages +
-                ", imageUrl='" + imageUrl + '\'' +
                 ", language=" + language +
                 '}';
     }

@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/bookstore-back.iml" filepath="$PROJECT_DIR$/bookstore-back.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bookstore-front/bookstore-front.iml" filepath="$PROJECT_DIR$/../bookstore-front/bookstore-front.iml" />
     </modules>
   </component>
 </project>
